@@ -26,18 +26,26 @@
 - Evidencia instalacion VM grafica
 ![Captura instalación VM gráfica](so/14.jpeg)
 
-- Captura particionamiento (lsblk)
+- Evidencia instalacion VM Consola
+![Evidencia instalacion VM Consola](so/13.jpeg)
+
+- Captura particionamiento VM grafica (lsblk)
 ![Captura particionamiento (lsblk)](so/10.png)
 
-- Captura configuración de red
-![Captura configuración de red](
+- Captura particionamiento VM Consola (lsblk)
+![Captura particionamiento (lsblk)](so/11.jpeg)
+
+- Captura configuración de red VM consola
+![Captura configuración de red](so/12.1.jpeg)
+
 - Captura prueba SSH funcional
+  No hay captura debido a que se trabajo en computador de la Universidad, por tanto no permitia la conexion adaptador puente, todo el proyecto se trabajo bajo la configuracion NAT 
 
 ### Comandos principales
 ```bash
-ip a                          # Ver interfaces de red
-lsblk                         # Ver particiones
-ssh usuario@ip_vm_consola     # Conectar por SSH
+ip a                          # Ver interfaces de red (hecho)
+lsblk                         # Ver particiones (hecho)
+ssh usuario@ip_vm_consola     # Conectar por SSH (no se hizo su realizacion)
 ```
 
 ---
@@ -61,8 +69,9 @@ docker/
 ```
 
 ### Evidencias
-- Captura `docker compose up -d`
-- 
+- Capturas Doker files
+  
+- Captura `docker compose up -d` 
 - Captura navegador accediendo al frontend
 - Captura `curl http://localhost:5000`
 
