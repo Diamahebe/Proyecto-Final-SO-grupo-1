@@ -70,10 +70,17 @@ docker/
 
 ### Evidencias
 - Capturas Doker files
-  
-- Captura `docker compose up -d` 
+![Capturas Doker files](so/2.1.png)
+
+- Captura `docker compose up -d`
+![Captura `docker compose up -d`](so/2.2.png)
+
 - Captura navegador accediendo al frontend
+![Captura navegador accediendo al frontend](so/5.png)
+
 - Captura `curl http://localhost:5000`
+![Captura `curl http://localhost:5000`](so/4.png)
+
 
 ### Comandos principales
 ```bash
