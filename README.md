@@ -8,12 +8,12 @@
 
 | Nombre | Código | Rol |
 |--------|--------|-----|
-| Diana Marcela Henao Betancourt | 202478024 | Virtualización, Docker, Kubernetes, Sitio Web + Documentación |
+| Diana Marcela Henao Betancourt | 202478024 | Arquitecta Cloud (Responsable de todos los componentes)|
 
 **Grupo asignado:** Grupo 1  
-**Distribución gráfica:** [nombre distro]  
-**Distribución consola:** [nombre distro]  
-**Imagen Docker base:** [imagen:tag]
+**Distribución gráfica:** Ubuntu 24.04 LTS  
+**Distribución consola:** Debian 13.5  
+**Imagen Docker base:** ubuntu:24.04
 
 ---
 
