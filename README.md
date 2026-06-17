@@ -23,9 +23,14 @@
 **Herramienta:** VirtualBox / VMware
 
 ### Evidencias
+- Evidencia instalacion VM grafica
 ![Captura instalación VM gráfica](so/14.jpeg)
+
 - Captura particionamiento (lsblk)
+![Captura particionamiento (lsblk)](so/10.png)
+
 - Captura configuración de red
+![Captura configuración de red](
 - Captura prueba SSH funcional
 
 ### Comandos principales
