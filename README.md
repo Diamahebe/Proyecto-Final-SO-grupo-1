@@ -23,7 +23,7 @@
 **Herramienta:** VirtualBox / VMware
 
 ### Evidencias
-- Captura instalación VM gráfica (so/11.png)
+- Captura instalación VM gráfica (so/14.jpeg)
 - Captura particionamiento (lsblk)
 - Captura configuración de red
 - Captura prueba SSH funcional
