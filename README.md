@@ -8,7 +8,7 @@
 
 | Nombre | Código | Rol |
 |--------|--------|-----|
-| Nombre 1 | 20XXXXXX | Virtualización, Docker, Kubernetes, Sitio Web + Documentación |
+| Diana Marcela Henao Betancourt | 202478024 | Virtualización, Docker, Kubernetes, Sitio Web + Documentación |
 
 **Grupo asignado:** Grupo 1  
 **Distribución gráfica:** [nombre distro]  
