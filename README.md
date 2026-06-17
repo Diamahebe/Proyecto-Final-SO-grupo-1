@@ -84,11 +84,11 @@ docker/
 
 ### Comandos principales
 ```bash
-docker compose up -d
-docker ps
-docker images
-curl http://localhost
-curl http://localhost:5000
+docker compose up -d (hecho)
+docker ps (hecho)
+docker images (hecho)
+curl http://localhost (hecho)
+curl http://localhost:5000 (hecho)
 ```
 
 ---
@@ -99,10 +99,13 @@ curl http://localhost:5000
 
 ### Manifiestos
 - `deployment.yaml` — Nginx con 2 réplicas
+![deployment.yaml` — Nginx con 2 réplicas](labotorio_parte2/deployment.yaml)
 - `service.yaml` — NodePort en puerto 30080
+![`service.yaml` — NodePort en puerto 30080](labotorio_parte2/service.yaml)
 
 ### Evidencias
 - Captura `kubectl get pods`
+![Captura `kubectl get pods`](
 - Captura `kubectl get svc`
 - Captura acceso desde navegador
 - Captura escalado a 3 réplicas
