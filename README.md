@@ -57,6 +57,7 @@ docker/
 
 ### Evidencias
 - Captura `docker compose up -d`
+- 
 - Captura navegador accediendo al frontend
 - Captura `curl http://localhost:5000`
 
