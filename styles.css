@@ -1,0 +1,247 @@
+/* === VARIABLES SIMPLES DE COLOR === */
+:root {
+    --bg-page: #0b0f19;         /* Fondo oscuro general */
+    --bg-card: #131926;         /* Fondo de las secciones */
+    --accent: #10b981;          /* Verde terminal de acento */
+    --text-main: #f1f5f9;       /* Texto claro principal */
+    --text-muted: #94a3b8;      /* Texto secundario gris */
+    --border: #1e293b;          /* Color de bordes */
+}
+
+/* === ESTILOS BASE === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6;
+}
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* === BARRA DE NAVEGACIÓN === */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(11, 15, 25, 0.95);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.navbar .logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: #fff;
+}
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+}
+.nav-links a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* === CONTENEDOR Y TITULAR === */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.hero-section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.hero-section h1 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+.hero-section .university {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* === SECCIONES (TARJETAS) === */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    scroll-margin-top: 5rem;
+}
+.card h2 {
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+.card h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 1.5rem 0 0.8rem 0;
+}
+
+/* === TABLAS Y LISTAS TÉCNICAS === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+th, td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    font-size: 0.95rem;
+}
+th {
+    background-color: #182235;
+    color: var(--text-muted);
+}
+.tech-list {
+    list-style: square;
+    padding-left: 1.2rem;
+    margin-top: 1rem;
+    color: var(--text-muted);
+}
+.tech-list li {
+    margin-bottom: 0.3rem;
+}
+
+/* === BLOQUES DE COMANDOS / TERMINAL === */
+pre {
+    background-color: #070a12;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    margin: 1rem 0;
+}
+code {
+    font-family: 'JetBrains Mono', monospace;
+    color: #38bdf8;
+}
+
+/* === RECUADRO DE EVIDENCIAS (IMÁGENES) === */
+.image-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.img-box {
+    border: 1px solid var(--border);
+    background-color: #0d131f;
+}
+.img-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.caption {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-card);
+}
+
+/* === NOTAS Y ALERTAS === */
+.note {
+    padding: 0.85rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.note.warning {
+    background-color: rgba(245, 158, 11, 0.05);
+    border: 1px solid #f59e0b;
+    color: #fde68a;
+}
+
+/* === VIDEO Y DIAGRAMA === */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 1rem 0;
+    border: 1px solid var(--border);
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.arch-img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+    display: block;
+    margin: 1.5rem auto 0 auto;
+}
+.manifests-text {
+    margin: 1rem 0;
+    font-size: 0.95rem;
+}
+
+/* === CONCLUSIONES === */
+.conclusions-list {
+    padding-left: 1.2rem;
+}
+.conclusions-list li {
+    margin-bottom: 1rem;
+}
+.text-center {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* === PIE DE PÁGINA === */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* AJUSTES PARA CELULARES */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .nav-links {
+        font-size: 0.8rem;
+    }
+    .card {
+        padding: 1.2rem;
+    }
+}

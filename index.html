@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final — Diana Henao</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SYS://ARCH_CLOUD</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#componente1">C1: Linux</a></li>
+            <li><a href="#componente2">C2: Docker</a></li>
+            <li><a href="#componente3">C3: K8s</a></li>
+            <li><a href="#componente4">C4: Web</a></li>
+            <li><a href="#conclusiones">Conclusiones</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <header class="hero-section" id="inicio">
+            <h1>PROYECTO FINAL: ARQUITECTO CLOUD</h1>
+            <p>Sistemas Operativos 750001C — Semestre 1 - 2026</p>
+            <p class="university">Universidad del Valle</p>
+        </header>
+
+        <section class="card">
+            <h2>Equipo y Configuración</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Código</th>
+                        <th>Rol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Diana Marcela Henao Betancourt</td>
+                        <td><code>202478024</code></td>
+                        <td><strong>Arquitecta Cloud</strong> (Todos los componentes)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ul class="tech-list">
+                <li><strong>Grupo asignado:</strong> Grupo 1</li>
+                <li><strong>Distribución gráfica:</strong> Ubuntu 24.04 LTS</li>
+                <li><strong>Distribución consola:</strong> Debian 13.5</li>
+                <li><strong>Imagen Docker base:</strong> ubuntu:24.04</li>
+            </ul>
+        </section>
+
+        <section class="card" id="componente1">
+            <h2>Componente 1: Virtualización con Linux</h2>
+            <p>Instalación y particionamiento de entornos operativos mediante máquinas virtuales (VM Gráfica + VM Consola).</p>
+            
+            <h3>Evidencias Fotográficas</h3>
+            <div class="image-group">
+                <div class="img-box">
+                    <img src="so/14.jpeg" alt="VM gráfica">
+                    <div class="caption">Instalación VM gráfica</div>
+                </div>
+                <div class="img-box">
+                    <img src="so/13.jpeg" alt="VM Consola">
+                    <div class="caption">Instalación VM Consola</div>
+                </div>
+                <div class="img-box">
+                    <img src="so/10.png" alt="lsblk gráfica">
+                    <div class="caption">Particionamiento lsblk (Gráfica)</div>
+                </div>
+                <div class="img-box">
+                    <img src="so/11.jpeg" alt="lsblk Consola">
+                    <div class="caption">Particionamiento lsblk (Consola)</div>
+                </div>
+                <div class="img-box">
+                    <img src="so/12.1.jpeg" alt="Red">
+                    <div class="caption">Configuración de red VM consola</div>
+                </div>
+            </div>
+
+            <div class="note warning">
+                <strong>Nota sobre SSH:</strong> Debido a restricciones en las salas de la Universidad (no permitía Adaptador Puente), todo el proyecto se configuró y trabajó bajo la red <strong>NAT</strong>. Por ende, no hay captura de SSH funcional.
+            </div>
+
+            <h3>Comandos Principales</h3>
+<pre><code>ip a                          # Ver interfaces de red
+lsblk                         # Ver particiones de disco
+ssh usuario@ip_vm_consola     # Conectar por SSH (No realizado por entorno NAT)</code></pre>
+        </section>
+
+        <section class="card" id="componente2">
+            <h2>Componente 2: Contenedores Docker</h2>
+            <p>Implementación de microservicios: Frontend corriendo en Nginx (puerto 80) y Backend en Python HTTP (puerto 5000).</p>
+
+            <h3>Evidencias Fotográficas</h3>
+            <div class="image-group">
+                <div class="img-box">
+                    <img src="so/2.1.png" alt="Docker files">
+                    <div class="caption">Capturas Dockerfiles</div>
+                </div>
+                <div class="img-box">
+                    <img src="so/2.2.png" alt="Docker compose">
+                    <div class="caption">Comando docker compose up -d</div>
+                </div>
+                <div class="img-box">
+                    <img src="so/5.png" alt="Navegador frontend">
+                    <div class="caption">Acceso al frontend desde el navegador</div>
+                </div>
+                <div class="img-box">
+                    <img src="so/4.png" alt="Curl backend">
+                    <div class="caption">Prueba curl http://localhost:5000</div>
+                </div>
+            </div>
+
+            <h3>Comandos Principales</h3>
+<pre><code>docker compose up -d       # Desplegar contenedores
+docker ps                  # Listar contenedores activos
+docker images              # Listar imágenes creadas
+curl http://localhost      # Probar frontend
+curl http://localhost:5000 # Probar backend</code></pre>
+        </section>
+
+        <section class="card" id="componente3">
+            <h2>Componente 3: Orquestación con Kubernetes</h2>
+            <p>Gestión del cluster local mediante la herramienta Minikube.</p>
+
+            <p class="manifests-text">
+                <strong>Manifiestos utilizados:</strong> 
+                <a href="laboratorio_parte2/deployment.yaml" target="_blank">deployment.yaml (Nginx 2 réplicas)</a> | 
+                <a href="laboratorio_parte2/service.yaml" target="_blank">service.yaml (NodePort 30080)</a>
+            </p>
+
+            <h3>Evidencias Fotográficas</h3>
+            <div class="image-group">
+                <div class="img-box">
+                    <img src="so/7.png" alt="Minikube start">
+                    <div class="caption">Comando minikube start</div>
+                </div>
+                <div class="img-box">
+                    <img src="so/8.4.png" alt="Kubectl pods">
+                    <div class="caption">Comando kubectl get pods</div>
+                </div>
+                <div class="img-box">
+                    <img src="so/8.2.png" alt="Kubectl svc">
+                    <div class="caption">Comando kubectl get svc</div>
+                </div>
+                <div class="img-box">
+                    <img src="so/9.png" alt="Navegador k8s">
+                    <div class="caption">Acceso al servicio desde navegador</div>
+                </div>
+                <div class="img-box">
+                    <img src="so/8.3.png" alt="Escalado">
+                    <div class="caption">Escalado a 3 réplicas exitoso</div>
+                </div>
+            </div>
+
+            <h3>Comandos Principales</h3>
+<pre><code>minikube start
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+kubectl get pods
+kubectl scale deployment nginx --replicas=3
+minikube service nginx --url</code></pre>
+        </section>
+
+        <section class="card" id="componente4">
+            <h2>Componente 4: Sitio Web e Infraestructura</h2>
+            <p>Documentación integral y centralizada del proyecto.</p>
+            
+            <h3>Video Demostrativo</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+            </div>
+            <p class="text-center">Enlace directo al video: <a href="https://youtu.be/..." target="_blank">YouTube.com</a></p>
+
+            <h3>Diagrama de Arquitectura</h3>
+            <img src="so/arquitectura.png" alt="Diagrama de Arquitectura" class="arch-img" onerror="this.style.display='none';">
+        </section>
+
+        <section class="card" id="conclusiones">
+            <h2>Conclusiones</h2>
+            <ol class="conclusions-list">
+                <li><strong>Aprendizaje principal:</strong> Se comprendió el flujo de despliegue moderno de aplicaciones, entendiendo cómo se pasa de una máquina virtual (infraestructura base), a aislar aplicaciones en Docker y finalmente automatizar su disponibilidad con Kubernetes.</li>
+                <li><strong>Dificultad y solución:</strong> La principal limitación radicó en las restricciones de red del laboratorio de la universidad que bloqueaban el adaptador puente. Se solucionó adaptando toda la arquitectura mediante enrutamientos internos bajo la red NAT.</li>
+                <li><strong>Recomendación:</strong> Para proyectos futuros, es fundamental estructurar los manifiestos declarativos de Kubernetes con anterioridad y validar la compatibilidad de puertos locales para evitar conflictos de red durante el escalado de réplicas.</li>
+            </ol>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Diana Marcela Henao Betancourt — &copy; 2026</p>
+        <p>Asignatura Sistemas Operativos — Universidad del Valle</p>
+    </footer>
+
+</body>
+</html>
