@@ -99,9 +99,10 @@ curl http://localhost:5000 (hecho)
 
 ### Manifiestos
 - `deployment.yaml` — Nginx con 2 réplicas
-![deployment.yaml` — Nginx con 2 réplicas](labotorio_parte2/deployment.yaml)
+- [deployment.yaml](laboratorio_parte2/deployment.yaml)
+
 - `service.yaml` — NodePort en puerto 30080
-![`service.yaml` — NodePort en puerto 30080](labotorio_parte2/service.yaml)
+- [service.yaml](laboratorio_parte2/service.yaml)
 
 ### Evidencias
 - Captura `kubectl get pods`
