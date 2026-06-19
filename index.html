@@ -196,9 +196,9 @@ minikube service nginx --url</code></pre>
         <section class="card" id="conclusiones">
             <h2>Conclusiones</h2>
             <ol class="conclusions-list">
-                <li><strong>Aprendizaje principal:</strong> Se comprendió el flujo de despliegue moderno de aplicaciones, entendiendo cómo se pasa de una máquina virtual (infraestructura base), a aislar aplicaciones en Docker y finalmente automatizar su disponibilidad con Kubernetes.</li>
-                <li><strong>Dificultad y solución:</strong> La principal limitación radicó en las restricciones de red del laboratorio de la universidad que bloqueaban el adaptador puente. Se solucionó adaptando toda la arquitectura mediante enrutamientos internos bajo la red NAT.</li>
-                <li><strong>Recomendación:</strong> Para proyectos futuros, es fundamental estructurar los manifiestos declarativos de Kubernetes con anterioridad y validar la compatibilidad de puertos locales para evitar conflictos de red durante el escalado de réplicas.</li>
+                <li><strong>Aprendizaje principal:</strong> Aprendí el proceso completo de cómo funcionan los servidores hoy en día. Entendí cómo crear primero una computadora virtual "vacía", luego cómo guardar y separar mis programas usando Docker (como en cajitas), y por último, cómo usar Kubernetes para controlar que esos programas funcionen solos y automáticamente.</li>
+                <li><strong>Dificultad y solución:</strong> El mayor problema fue que el internet de la universidad tenía bloqueos de seguridad que no dejaban conectar mis máquinas virtuales de forma normal.</li>
+                <li><strong>Recomendación:</strong> Para la próxima vez, recomiendo tener listos y escritos desde antes los archivos de configuración (los manifiestos) para Kubernetes. También es muy importante revisar que los puertos de conexión estén libres antes de empezar, para que no salgan errores cuando intentemos crear más copias de la aplicación..</li>
             </ol>
         </section>
 
