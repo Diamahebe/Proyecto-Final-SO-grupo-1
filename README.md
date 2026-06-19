@@ -105,8 +105,10 @@ curl http://localhost:5000 (hecho)
 - [service.yaml](laboratorio_parte2/service.yaml)
 
 ### Evidencias
+- Captura `minikube start`
+![Captura kubectl get pods](so/7.png)
 - Captura `kubectl get pods`
-![Captura `kubectl get pods`](
+![Captura kubectl get pods](so/7.png)
 - Captura `kubectl get svc`
 - Captura acceso desde navegador
 - Captura escalado a 3 réplicas
