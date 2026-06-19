@@ -108,10 +108,13 @@ curl http://localhost:5000 (hecho)
 - Captura `minikube start`
 ![Captura kubectl get pods](so/7.png)
 - Captura `kubectl get pods`
-![Captura kubectl get pods](so/7.png)
+![Captura kubectl get pods](so/8.4.png)
 - Captura `kubectl get svc`
+![Captura kubectl get pods](so/8.2.png)
 - Captura acceso desde navegador
+![Captura kubectl get pods](so/9.png)
 - Captura escalado a 3 réplicas
+![Captura kubectl get pods](so/8.3.png)
 
 ### Comandos principales
 ```bash
