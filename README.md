@@ -150,9 +150,11 @@ minikube service nginx --url
 ## Conclusiones
 
 1. [Aprendizaje principal]
+Aprendí el proceso completo de cómo funcionan los servidores hoy en día. Entendí cómo crear primero una computadora virtual "vacía", luego cómo guardar y separar mis programas usando Docker (como en cajitas), y por último, cómo usar Kubernetes para controlar que esos programas funcionen solos y automáticamente.
 2. [Dificultad encontrada y cómo se resolvió]
+El mayor problema fue que el internet de la universidad tenía bloqueos de seguridad que no dejaban conectar mis máquinas virtuales de forma normal.
 3. [Recomendación para futuros proyectos]
-
+Para la próxima vez, recomiendo tener listos y escritos desde antes los archivos de configuración (los manifiestos) para Kubernetes. También es muy importante revisar que los puertos de conexión estén libres antes de empezar, para que no salgan errores cuando intentemos crear más copias de la aplicación..
 ---
 
 *Proyecto desarrollado para la asignatura Sistemas Operativos 750001C — Semestre 1, 2026*
