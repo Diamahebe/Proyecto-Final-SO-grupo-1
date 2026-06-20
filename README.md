@@ -131,7 +131,7 @@ minikube service nginx --url
 ## Componente 4: Sitio Web de Documentación
 
 **URL del sitio:** [https://diamahebe.github.io/Proyecto-Final-SO-grupo-1/]
-**Video YouTube:** [https://youtu.be/...]
+**Video YouTube:** [https://www.youtube.com/watch?v=lT6z8g4Xz1M]
 
 ### Secciones del sitio
 - Home: introducción y objetivos
